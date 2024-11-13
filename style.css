@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+    color: #fff;
+    padding-top: 120px; /* Ajoute de l'espace sous le header */
+}
+
+/* Style du header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centrer le header sur la page */
+    z-index: 1000;
+    width: 100%; /* La navbar occupe toute la largeur de la page */
+    justify-content: center;
+}
+
+/* Style de la barre de navigation */
+nav {
+    width: 100%; /* La navbar prend toute la largeur */
+    display: flex;
+    justify-content: center; /* Centrer les éléments */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Nécessaire pour positionner les sous-menus */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.0em;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Style du menu déroulant */
+.dropdown {
+    display: none; /* Cacher le menu par défaut */
+    position: absolute; /* Positionner le sous-menu sous son élément parent */
+    top: 100%; /* Le placer juste en dessous de l'élément parent */
+    left: 0;
+    background-color: #303030;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: 2px solid black;
+    width: max-content;
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: white;
+    font-size: 1.8em;
+    padding: 8px 15px;
+}
+
+.dropdown li a:hover {
+    color: #ffcc00;
+}
+
+/* Afficher le menu déroulant lors du survol */
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Adaptation pour les écrans plus petits */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Style du bouton de retour en haut */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Caché par défaut */
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    color: #ffcc00;
+}
+
